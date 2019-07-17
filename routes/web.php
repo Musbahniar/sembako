@@ -20,3 +20,6 @@
 
 Route::get('/', 'PagesController@homepage');
 Route::get('about', 'PagesController@about');
+Route::get('news', 'PagesController@news');
+Route::get('news/{id}', 'PagesController@show');
+

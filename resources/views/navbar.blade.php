@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             @if (empty($halaman))            
-                <li class="nav-item active"><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a></li>
             @else
                 <li class="nav-item"><a class="nav-link" href="/">Home </a></li>
             @endif
@@ -33,9 +33,11 @@
                     <a class="dropdown-item" href="#">Pasar Carigin</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-            </li>
+            @if (!empty($halaman) && ($halaman == 'news'))
+                <li class="nav-item active"><a class="nav-link" href="{{ url('news') }}">News</a></li>
+            @else
+                <li class="nav-item"><a class="nav-link" href="{{ url('news') }}">News</a></li>
+            @endif
             <li class="nav-item">
                 <a class="nav-link" href="#">Market Location</a>
             </li>
