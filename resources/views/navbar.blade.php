@@ -28,9 +28,9 @@
                     aria-haspopup="true" aria-expanded="false">
                     Market
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Pasar Gedebage</a>
-                    <a class="dropdown-item" href="#">Pasar Carigin</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="daftarpasar">
+                    <a class="dropdown-item" href="#" myval="1">Pasar Gedebage</a>
+                    <a class="dropdown-item" href="#" myval="2">Pasar Carigin</a>
                 </div>
             </li>
             @if (!empty($halaman) && ($halaman == 'news'))
@@ -48,3 +48,13 @@
         </form>
     </div>
 </nav>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#daftarpasar a").bind("click", function() 
+        {  
+            var idpasar = $(this).attr('myval');
+            alert(idpasar);
+        });
+    });
+</script>

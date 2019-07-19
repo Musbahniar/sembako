@@ -38,7 +38,9 @@ class PagesController extends Controller
     }
 
     public function show($id) {
+        $halaman = "news";
+
         $beritaUtama = DB::table('berita')->find($id);
-        return view('pages.shownews', ['beritaUtama' => $beritaUtama]);
+        return view('pages.shownews', compact('beritaUtama', 'halaman'));
     }
 }
