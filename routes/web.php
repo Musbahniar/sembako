@@ -23,3 +23,6 @@ Route::get('about', 'PagesController@about');
 Route::get('news', 'PagesController@news');
 Route::get('news/{id}', 'PagesController@show');
 
+Route::get('market/{id}', 'MarketsController@show');
+
+

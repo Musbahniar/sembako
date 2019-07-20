@@ -176,6 +176,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // laravelcollective/html
+        Collective\Html\HtmlServiceProvider::class,
+
     ],
 
     /*
@@ -226,7 +229,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        //Laravel SweetAlert
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
+        // laravelcollective/html
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
